@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Messages</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="./js/main.js"></script>
+    <script src="./js/new.js"></script>
 </head>
+
 <body>
-    
+    <header>
+        <a href="signup.html">Sign-Up</a>
+        <a href="login.html">Login</a>
+        <a href="new.html">New Text Message</a>
+        <a href="profile.html">Edit Profile</a>
+    </header>
+    <main>
+        <form id="new-message-form">
+            <h2>Create new message</h2>
+            <div class="form-group">
+                <label for="message">Message: </label>
+                <textarea id="message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
 </body>
+
 </html>

@@ -68,6 +68,25 @@ async function handleLike(postElement) {
 
 }
 
+async function handleDelete(postElement) {
+  const response = await fetch(
+    BASE_URL + "/api/posts/"+postElement.dataset.post_id , {
+    method: "DELETE",
+    headers: headersWithAuth(),
+  });
+  const object = await response.json();
+  if (object.statusCode == 400) {
+    alert("Bad request");
+  } else if (object.statusCode == 202) {
+    alert("Post Deleted!")
+    window.location.reload();
+  } else {
+    alert("Error");
+    window.location.reload();
+  }
+}
+
+
 function getMessage(m) {
   return `
         <div data-post_id="${m._id}" class="message">
@@ -77,11 +96,12 @@ function getMessage(m) {
             LIKES: ${m.likes.length}
             <button class="btn-like">Like</button>
             <button class="btn-unlike">Unlike</button>
+            <div>
+              <button class="btn-delete">Delete message</button>
+            </div>
         </div>
     `;
 }
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -108,6 +128,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   unlikeButtons.forEach(unlike => {
     unlike.addEventListener("click", function (event) {
       handleUnLike(unlike.parentElement);
+    })
+  })
+
+  const deleteButtons = document.querySelectorAll(".btn-delete");
+  deleteButtons.forEach(deleteBtn => {
+    deleteBtn.addEventListener("click", function (event) {
+      handleDelete(deleteBtn.parentElement.parentElement);
     })
   })
 
