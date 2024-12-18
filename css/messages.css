@@ -1,0 +1,9 @@
+#output {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#output .message * {
+    margin-bottom: 10px;
+}

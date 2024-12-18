@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/main.js"></script>
     <script src="js/profile.js"></script>
 </head>
 <body>
     <button id="logout-btn">Logout</button>
+    <div id="userdata"></div>
+
+    <form id="profile-form">
+        <h2>Update User data</h2>
+        <div class="form-group">
+            <label for="fullName">Full name: </label>
+            <input type="text" id="fullName">
+        </div>
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+        </div>
+        <div class="form-group">
+            <label for="bio">Bio: </label>
+            <textarea id="bio"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
