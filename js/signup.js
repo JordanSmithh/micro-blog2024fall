@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    signUpButton.addEventListener("click",async ()=>{
+    const signupForm = document.getElementById("signup-form");
+    const output = document.getElementById("output");
+
+    signupForm.addEventListener("submit",async (event)=>{
+        event.preventDefault();
+        const usernameValue = document.getElementById("email").value;
+        const fullNameValue = document.getElementById("fullName").value;
+        const passwordValue = document.getElementById("password").value;
         const result = await signUp(
-            username.value,
-            fullName.value,
-            password.value
+            usernameValue,
+            fullNameValue,
+            passwordValue
         );
         if("Conflict" === result){
             output.innerText = "Username already taken.";

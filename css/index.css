@@ -6,9 +6,34 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #F9FAFB;
-  color: #333;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+	background-color: #F9FAFB;
+	color: #333;
+}
+
+#confettiCanvas {
+	background-color: #1a202c;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.home-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	pointer-events: none;
 }
 
 body.dark {
@@ -21,6 +46,10 @@ a {
   font-size: 16px;
 }
 
+h1{
+	font-size: 86px;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -28,10 +57,10 @@ header {
   gap: 20px;
 }
 
-main {
+/* main {
   max-width: 50%;
   margin: 0 auto;
-}
+} */
 
 
  body {
@@ -46,7 +75,7 @@ ul {
 	 position: fixed;
 	 top: 1rem;
 	 left: 1rem;
-	 background: transparent;
+	 background: #fff;
 	 border-radius: 10px;
 	 padding: 1rem 0;
 	 height: calc(100vh - 4rem);

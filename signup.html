@@ -1,22 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
+    <title>Login</title>
+    <script src="https://unpkg.com/feather-icons@4.29.2/dist/feather.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="./js/main.js" defer></script>
     <script src="./js/signup.js"></script>
 </head>
+
 <body>
-    <a href="signup.html">Sign-Up</a>
-    <a href="login.html">Login</a>
+
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" id="modebutton"><i data-feather="toggle-left"></i><span>Dark
+                        Mode</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="messages.html" class="navbar__link"><i
+                        data-feather="message-square"></i><span>Messages</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="profile.html" class="navbar__link"><i data-feather="users"></i><span>Profile</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="new.html" class="navbar__link"><i data-feather="send"></i><span>New Message</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="login.html" class="navbar__link"><i data-feather="log-in"></i><span>Login</span></a>
+            </li>
+        </ul>
+    </nav>
+
     <main>
-        <label><span>Username/Email</span><input id="username" type="email"></label>
-        <label><span>Full Name</span><input id="fullName"></label>
-        <label><span>Password</span><input id="password" type="password"></label>
-        <button id="signUpButton">Sign-Up</button>
-        <div id="output">?</div>
+        <section>
+            <div class="login-box">
+                <form id="signup-form">
+                    <h2>Signup</h2>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="text" id="email" placeholder="Email/Username" required>
+                        <!-- <label>Email</label> -->
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="text" id="fullName" placeholder="Full name" required>
+                        <!-- <label>Password</label> -->
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <!-- <label>Password</label> -->
+                    </div>
+                    <button type="submit">Register</button>
+                    <div class="register-link">
+                        <p>Already have an account? <a href="login.html"> Login</a></p>
+                    </div>
+                </form>
+            </div>
+        <div id="output"></div>
+    </section>
     </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
+
 </html>

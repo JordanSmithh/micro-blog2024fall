@@ -3,11 +3,19 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
+    max-width: 50%;
+    margin: 0 auto;
 }
 
 #output .message {
     border: 1px solid black;
     padding: 20px;
+    background-color: #fff;
+}
+
+body.dark #output .message {
+    border: 1px solid #fff;
+    background-color: #000;
 }
 
 #output .message * {
