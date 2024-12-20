@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const username = localStorage.getItem("username");
     const logoutButton = document.getElementById("logout-btn");
     const updateForm = document.getElementById("profile-form");
+    const searchForm = document.getElementById("search-form");
 
     function displayUserData(userData){
         if(userData) {
             const userDataEl = document.getElementById("userdata");
             userDataEl.innerHTML = `
-                <h3>${userData.username}</h3>
+                <h3>Username: ${userData.username}</h3>
                 <p>${userData.bio}</p>
             `;
         }
@@ -70,6 +71,23 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("User data updated successfully")
             window.location.reload();
         }
+    })
+
+    searchForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const trackInput = document.getElementById("track").value;
+
+        const response = await fetch(
+             `https://api.spotify.com/v1/search?offset=5&limit=10&query=${trackInput}&type=track&locale=en-US,en;q%3D0.9`, {
+            method: "GET",
+            headers: headersWithAuthSpotify(),
+        });
+        const object = await response.json();
+        console.log(object)
+        // if(object.fullName) {
+        //     alert("User data updated successfully")
+        //     window.location.reload();
+        // }
     })
 
 })

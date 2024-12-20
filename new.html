@@ -4,30 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
+    <title>New message</title>
+    <script src="https://unpkg.com/feather-icons@4.29.2/dist/feather.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/messages.css">
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="css/new.css">
+    <script src="./js/main.js" defer></script>
     <script src="./js/new.js"></script>
 </head>
 
 <body>
-    <header>
-        <a href="signup.html">Sign-Up</a>
-        <a href="login.html">Login</a>
-        <a href="new.html">New Text Message</a>
-        <a href="profile.html">Edit Profile</a>
-    </header>
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" id="modebutton"><i data-feather="toggle-left"></i><span>Dark Mode</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="messages.html" class="navbar__link"><i
+                        data-feather="message-square"></i><span>Messages</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="profile.html" class="navbar__link"><i data-feather="users"></i><span>Profile</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="new.html" class="navbar__link"><i data-feather="send"></i><span>New Message</span></a>
+            </li>
+            <li class="navbar__item">
+                <a href="login.html" class="navbar__link"><i data-feather="log-in"></i><span>Login</span></a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <form id="new-message-form">
-            <h2>Create new message</h2>
-            <div class="form-group">
-                <label for="message">Message: </label>
-                <textarea id="message"></textarea>
+            <div class="form-wrapper">
+                <h2>Create new message</h2>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Enter your message..."></textarea>
+                </div>
+                <button type="submit">Submit</button>
             </div>
-            <button type="submit">Submit</button>
         </form>
     </main>
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>

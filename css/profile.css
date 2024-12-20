@@ -1,0 +1,43 @@
+.profile-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+form label, form input{ 
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 8px 6px;
+}
+
+#profile-form, #search-form {
+    width: 250px;
+}
+
+#profile-form h2, #search-form h2 {
+    margin-bottom: 20px;
+}
+
+#profile-form textarea{
+    width: 250px;
+    min-height: 150px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+
+form button{
+    padding: 10px 12px;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    border: none;
+}

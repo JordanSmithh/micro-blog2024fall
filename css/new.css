@@ -1,0 +1,33 @@
+#new-message-form {
+    width: fit-content;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#new-message-form h2 {
+    margin-bottom: 20px;
+}
+
+#new-message-form textarea{
+    width: 250px;
+    min-height: 150px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+
+form button{
+    padding: 10px 12px;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    border: none;
+}
+
+body.dark form button {
+    background-color: #e1e1e1;
+    color: #000;
+}
