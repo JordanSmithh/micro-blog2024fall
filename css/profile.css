@@ -1,3 +1,13 @@
+body {
+    background-image: url('../img/pexels-tania-504258078-16152805.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    color: #fff; /* Adjust text color for better readability */
+}
+
+
+
 .profile-content {
     min-height: 100vh;
     display: flex;

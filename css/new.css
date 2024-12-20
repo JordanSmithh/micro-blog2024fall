@@ -1,3 +1,12 @@
+body {
+    background-image: url('../img/pexels-bintimalu-1485657.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    color: #fff; /* Adjust text color for better readability */
+}
+
+
 #new-message-form {
     width: fit-content;
     margin: 0 auto;

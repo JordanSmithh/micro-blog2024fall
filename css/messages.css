@@ -1,3 +1,13 @@
+body {
+    background-image: url('../img/pexels-didsss-2969925.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+     /* Adjust text color for better readability */
+}
+
+
+
 #output {
     display: flex;
     flex-direction: column;
